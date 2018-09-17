@@ -3,9 +3,9 @@ package com.comp3004;
 public class Card {
 	
 	private int value;
-	private char suit;
+	private int suit;
 
-	public Card(int i, char c) {
+	public Card(int i, int c) {
 		this.value = i;
 		this.suit = c;
 	}
@@ -27,52 +27,59 @@ public class Card {
 	}
 	
 	public String toString() {
-		if(value == 1 && suit == 'D') {
-			return "DA";
-		}else if(value == 1 && suit == 'H'){
-			return "HA";
-		}else if(value == 1 && suit == 'C'){
-			return "CA";
-		}else if(value == 1 && suit == 'S'){
-			return "SA";
-		}else if(value == 11 && suit == 'D'){
-			return "DJ";
-		}else if(value == 11 && suit == 'H'){
-			return "HJ";
-		}else if(value == 11 && suit == 'C'){
-			return "CJ";
-		}else if(value == 11 && suit == 'S'){
-			return "SJ";
-		}else if(value == 12 && suit == 'D'){
-			return "DQ";
-		}else if(value == 12 && suit == 'H'){
-			return "HQ";
-		}else if(value == 12 && suit == 'C'){
-			return "CQ";
-		}else if(value == 12 && suit == 'S'){
-			return "SQ";
-		}else if(value == 13 && suit == 'D'){
-			return "DK";
-		}else if(value == 13 && suit == 'H'){
-			return "HK";
-		}else if(value == 13 && suit == 'C'){
-			return "CK";
-		}else if(value == 13 && suit == 'S'){
-			return "SK";
-		}else if(value < 11 && value > 1){
-			if(suit == 'D') {
-				return ("D" + value);
-			}else if(suit == 'H') {
-				return ("H" + value); 
-			}else if(suit == 'C') {
-				return ("C" + value);
-			}else if(suit == 'S'){
-				return ("S" + value);
+		
+		if(value == 1) {
+			if(suit == 1) {
+				return "DA";
+			}else if(suit == 2) {
+				return "HA";
+			}else if(suit == 3) {
+				return "CA";
 			}else {
-				return null;
+				return "SA";
+			}
+		}else if(value == 11) {
+			if(suit == 1) {
+				return "DJ";
+			}else if(suit == 2) {
+				return "HJ";
+			}else if(suit == 3) {
+				return "CJ";
+			}else {
+				return "SJ";
+			}
+		}else if(value == 12) {
+			if(suit == 1) {
+				return "DQ";
+			}else if(suit == 2) {
+				return "HQ";
+			}else if(suit == 3) {
+				return "CQ";
+			}else {
+				return "SQ";
+			}
+		}else if(value == 13) {
+			if(suit == 1) {
+				return "DK";
+			}else if(suit == 2) {
+				return "HK";
+			}else if(suit == 3){
+				return "CK";
+			}else {
+				return "SK";
+			}
+		}else if(value > 1 && value <=10){
+			if(suit == 1) {
+				return ("D" + value);
+			}else if(suit == 2) {
+				return("H" + value);
+			}else if(suit == 3) {
+				return ("C" + value);
+			}else {
+				return ("S" + value);
 			}
 		}else {
-			return null;
+			return "Error!";
 		}
 	}
 	
