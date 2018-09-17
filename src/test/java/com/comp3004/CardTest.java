@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class CardTest extends TestCase{
 	
-	public void faceCardTest() {
+	public void testFaceCard() {
 		Card jack = new Card(11, 'S');
 		Card queen = new Card(12, 'H');
 		Card king = new Card(13, 'C');
@@ -21,19 +21,19 @@ public class CardTest extends TestCase{
 		
 	}
 	
-	public void isAceLowTest() {
+	public void testIsAceLow() {
 		Card ace = new Card(1, 'H');
 		boolean lowAce = true;
 		assertEquals(1, ace.getValue(lowAce));
 	}
 	
-	public void isAceHighTest() {
+	public void testIsAceHigh() {
 		Card ace = new Card(1, 'C');
 		boolean lowAce = false;
 		assertEquals(11, ace.getValue(lowAce));
 	}
 	
-	public void numberCardTest() {
+	public void testNumberCard() {
 		Card seven = new Card(7, 'S');
 		
 		boolean lowAce = true;
@@ -44,7 +44,7 @@ public class CardTest extends TestCase{
 		
 	}
 	
-	public void toStringFaceCardTest() {
+	public void testToStringFaceCard() {
 		Card jack = new Card(11, 'S');
 		Card queen = new Card(12, 'H');
 		Card king = new Card(13, 'C');
@@ -55,7 +55,7 @@ public class CardTest extends TestCase{
 		
 	}
 	
-	public void toStringNumberCardTest() {
+	public void testToStringNumberCard() {
 		Card seven = new Card(7, 'H');
 		
 		assertEquals("H7", seven.toString());
