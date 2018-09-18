@@ -47,6 +47,6 @@ public class DeckTest extends TestCase{
 		deck2.addCard(deck1.getCard(0));
 		deck2.addCard(deck1.getCard(1));
 		
-		assertEquals((deck2.getCard(0).getValue(lowAce)+deck2.getCard(0).getValue(lowAce)), deck2.deckTotal());
+		assertEquals((deck2.getCard(0).getValue(lowAce)+deck2.getCard(1).getValue(lowAce)), deck2.deckTotal());
 	}
 }
