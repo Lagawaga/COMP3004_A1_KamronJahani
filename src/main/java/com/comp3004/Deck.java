@@ -66,4 +66,20 @@ public class Deck {
 		this.deck.add(incomingDeck.getCard(0));
 		incomingDeck.remove(0);
 	}
+	
+	public int deckTotal() {
+		
+		int total = 0;
+		boolean lowAce = true;
+		
+		for(Card card : this.deck) {
+			total += card.getValue(lowAce);
+		}
+		
+		System.out.println(total);
+		return total;
+		
+	}
+	
+	
 }
