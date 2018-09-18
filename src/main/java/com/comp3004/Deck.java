@@ -49,6 +49,10 @@ public class Deck {
 		}
 		return output;
 	}
+	
+	public Card getCard(int index) {
+		return this.deck.get(index);
+	}
 
 	public void remove(int index) {
 		this.deck.remove(index);
