@@ -41,6 +41,7 @@ public class DeckTest extends TestCase{
 	
 	public void testDeckTotal() {
 		Deck deck1 = new Deck();
+		deck1.newDeck();
 		Deck deck2 = new Deck();
 		boolean lowAce;
 		lowAce = true;
