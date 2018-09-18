@@ -18,4 +18,25 @@ public class DeckTest extends TestCase{
 		assertEquals(51, deck.numCards());
 	}
 	
+	public void testAddCard() {
+		Deck deck = new Deck();
+		deck.newDeck();
+		deck.remove(1);
+		deck.remove(2);
+		deck.addCard();
+		assertEquals(51, deck.numCards());
+	}
+	
+	public void testDrawCard() {
+		Deck deck = new Deck();
+		Deck playerDeck = new Deck();
+		
+		deck.newDeck();
+		
+		playerDeck.drawCard(deck);
+		assertEquals(1, playerDeck.numCards());
+		assertEquals(51, deck.numCards());
+		
+	}
+	
 }
