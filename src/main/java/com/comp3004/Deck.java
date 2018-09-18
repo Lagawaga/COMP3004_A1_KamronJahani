@@ -58,4 +58,12 @@ public class Deck {
 		this.deck.remove(index);
 	}
 	
+	public void addCard(Card card) {
+		this.deck.add(card);
+	}
+	
+	public void drawCard(Deck incomingDeck) {
+		this.deck.add(incomingDeck.getCard(0));
+		incomingDeck.remove(0);
+	}
 }
