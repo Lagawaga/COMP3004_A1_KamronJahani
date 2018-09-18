@@ -39,4 +39,14 @@ public class DeckTest extends TestCase{
 		
 	}
 	
+	public void testDeckTotal() {
+		Deck deck1 = new Deck();
+		Deck deck2 = new Deck();
+		boolean lowAce;
+		lowAce = true;
+		deck2.addCard(deck1.getCard(0));
+		deck2.addCard(deck1.getCard(1));
+		
+		assertEquals((deck2.getCard(0).getValue(lowAce)+deck2.getCard(0).getValue(lowAce)), deck2.deckTotal());
+	}
 }
