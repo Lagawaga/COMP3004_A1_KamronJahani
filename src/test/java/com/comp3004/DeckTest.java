@@ -23,7 +23,7 @@ public class DeckTest extends TestCase{
 		deck.newDeck();
 		deck.remove(1);
 		deck.remove(2);
-		deck.addCard();
+		deck.addCard(deck.getCard(0));
 		assertEquals(51, deck.numCards());
 	}
 	
