@@ -39,9 +39,30 @@ public class DeckTest extends TestCase{
 		
 	}
 	
+	public void testHitRepeat() {
+		Deck deck = new Deck();
+		deck.newDeck();
+		Deck playerDeck = new Deck();
+		
+
+		playerDeck.drawCard(deck);
+		playerDeck.drawCard(deck);
+		playerDeck.drawCard(deck);
+		playerDeck.drawCard(deck);
+		playerDeck.drawCard(deck);
+		
+		
+		assertEquals(5,playerDeck.numCards());
+		
+		
+	}
+	
+	
+	
 	public void testDeckTotal() {
 		Deck deck1 = new Deck();
 		deck1.newDeck();
+		deck1.shuffle();
 		Deck deck2 = new Deck();
 		boolean lowAce;
 		lowAce = true;

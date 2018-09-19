@@ -76,7 +76,6 @@ public class Deck {
 			total += card.getValue(lowAce);
 		}
 		
-		System.out.println(total);
 		return total;
 		
 	}
